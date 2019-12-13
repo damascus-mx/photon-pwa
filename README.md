@@ -1,4 +1,4 @@
-# Damascus'Photon PWA
+# Damascus' Photon PWA
 
 Damascus' Photon is a platform where students can fetch their lab materials quicker than ever.
 
