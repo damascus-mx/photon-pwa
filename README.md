@@ -1,6 +1,6 @@
-# PhotonPwa
+# Photon PWA
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+Damascus' Photon is a platform where students can fetch their lab materials quicker than ever.
 
 ## Development server
 
