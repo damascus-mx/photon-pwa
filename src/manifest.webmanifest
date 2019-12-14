@@ -1,7 +1,7 @@
 {
-  "name": "photon-pwa",
-  "short_name": "photon-pwa",
-  "theme_color": "#1976d2",
+  "name": "Photon",
+  "short_name": "Photon",
+  "theme_color": "#ff1744",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
