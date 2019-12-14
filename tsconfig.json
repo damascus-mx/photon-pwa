@@ -14,6 +14,35 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "paths": {
+      "@photon/core": [
+        "src/app/core/core.module"
+      ],
+      "@photon/guard/*": [
+        "src/app/core/guards/*"
+      ],
+      "@photon/service/*": [
+        "src/app/core/services/*"
+      ],
+      "@photon/helper/*": [
+        "src/app/core/helper/*"
+      ],
+      "@photon/interceptor/*": [
+        "src/app/core/interceptor/*"
+      ],
+      "@photon/shared/*": [
+        "src/app/shared/*"
+      ],
+      "@photon/config/*": [
+        "src/app/config/*"
+      ],
+      "@photon/env": [
+        "src/environments/environment"
+      ],
+      "@photon/module/*": [
+        "src/app/modules/*"
+      ]
+    },
     "lib": [
       "es2018",
       "dom"
