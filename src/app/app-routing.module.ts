@@ -13,6 +13,10 @@ const routes: Routes = [
     path: 'info',
     canActivate: [AuthGuard],
     loadChildren: () => import('@photon/shared/views/landing/landing.module').then(module => module.LandingModule)
+  },
+  {
+    path: 'authenticate',
+    loadChildren: () => import('@photon/shared/views/auth/auth.module').then(module => module.AuthModule)
   }
 ];
 
