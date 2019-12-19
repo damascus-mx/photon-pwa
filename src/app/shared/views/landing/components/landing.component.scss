@@ -7,7 +7,10 @@
     .main-content {
         width: 100%;
         height: 100%;
-        background-color: $primary;
+        background:  url('src/assets/img/branding/photon_1.svg'), url('src/assets/img/background/background_1_right.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
 
         display: flex;
         display: -webkit-flex;
@@ -31,15 +34,43 @@
             display: -webkit-flex;
             
             flex-flow: column;
-            align-items: center;
             justify-content: center;
             height: 100%;
             height: -webkit-fill-available;
+
+            padding: 24px;
+
+
+            #app-title {
+                font-family: 'Poppins', sans-serif;
+                margin-bottom: 0;
+                font-size: 7vh
+            }
+
+            #app-college {
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                font-size: 3vh;
+            }
         }
     }
 
     .content {
         width: 100%;
         height: 200px;
+
+        .section {
+            .section-title {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1280px) {
+    .wrapper {
+        .main-content {
+            background-image: url('src/assets/img/background/background_mobile_1.svg');
+        }
     }
 }
