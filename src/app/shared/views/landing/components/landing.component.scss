@@ -7,7 +7,7 @@
     .main-content {
         width: 100%;
         height: 100%;
-        background:  url('src/assets/img/branding/photon_1.svg'), url('src/assets/img/background/background_1_right.svg');
+        background:  /*url('src/assets/img/branding/photon_1.svg'), */url('src/assets/img/background/background_1_right.svg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -38,31 +38,193 @@
             height: 100%;
             height: -webkit-fill-available;
 
-            padding: 24px;
+            padding: 24px 32px;
+            width: max-content;
+
+            img {
+                image-rendering: auto;
+                align-self: center;
+            }
 
 
             #app-title {
                 font-family: 'Poppins', sans-serif;
                 margin-bottom: 0;
+                margin-top: 0;
                 font-size: 7vh
             }
 
             #app-college {
                 text-transform: uppercase;
                 letter-spacing: 3px;
-                font-size: 3vh;
+                font-size: 2.5vh;
+                color: gray;
+            }
+
+            .button-container {
+                display: flex;
+                display: -webkit-flex;
+
+                margin-top: 24px;
             }
         }
     }
 
     .content {
         width: 100%;
-        height: 200px;
+        max-width: 100%;
+
+        display: flex;
+        display: -webkit-flex;
+
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
 
         .section {
+            max-width: 80vh;
+            display: flex;
+            display: -webkit-flex;
+            width: inherit;
+
+            flex-flow: column;
+
+            margin: 48px 24px;
+            border-radius: 8px;
+
             .section-title {
-                margin-top: 0;
+                display: flex;
+                display: -webkit-flex;
+
+                flex-flow: column;
+                width: inherit;
+                height: 48px;
+                max-height: 48px;
+                border-radius: 8px 8px 0 0;
+
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                b {
+                    margin: 0;
+                    text-transform: uppercase;
+                    color: grey;
+                    letter-spacing: 4px;
+                }
             }
+
+            .divider {
+                width: 32px;
+                max-width: 32px;
+                align-self: center; 
+            }
+
+            .section-content {
+                padding: 0 24px 24px;
+
+                h2 {
+                    text-align: center;
+                    font-family: 'Poppins', sans-serif;
+                }
+
+                p {
+                    margin: 0;
+                    text-align: center;
+                }
+
+                .card-container {
+                    display: -webkit-flex;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    margin: 16px;
+
+                    .card {
+                        width: 300px;
+                        height: auto;
+
+                        border-radius: 8px;
+
+                        margin: 8px;
+
+                        .card-title {
+                            text-align: center;
+                            margin: 24px;
+                            font-size: larger;
+                            font-family: 'Poppins', sans-serif;
+                        }
+
+                        .card-content {
+                            margin: 4px;
+
+                            p {
+                                margin: 0;
+                            }
+                        }
+
+                        .card-actions {
+                            display: flex;
+                            display: -webkit-flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 8px;
+                        }
+
+                        .card-img {
+                            max-width: 100%;
+                            max-height: fit-content;
+
+                            padding: 24px;
+
+                            img {
+                                image-rendering: optimizeQuality;
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .section-actions {
+                margin: 16px;
+                text-align: center;
+            }
+
+            .section-img {
+                max-width: inherit;
+                align-self: center;
+                display: flex;
+                display: -webkit-flex;
+
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 70%;
+                    height: auto;
+                }
+            }
+        }
+
+        #platform {
+            max-width: 100vh;
+        }
+
+        .footer {
+            display: flex;
+            display: -webkit-flex;
+
+            flex-flow: row wrap;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+
+            background-color: $accent;
+            color: #ffffff;
+            width: 100%;
         }
     }
 }
@@ -71,6 +233,18 @@
     .wrapper {
         .main-content {
             background-image: url('src/assets/img/background/background_mobile_1.svg');
+
+            .header {
+                width: fit-content;
+            }
+        }
+
+        .content {
+            .section {
+                width: inherit;
+                max-width: 768px;
+                margin: 32px 0;
+            }
         }
     }
 }

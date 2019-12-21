@@ -1,24 +1,161 @@
 <div class="wrapper">
-    <div class="main-content">
+
+    <!-- Viewport -->
+    <div class="main-content" #viewport>
         <div class="actions-container">
             <div class="actions">
                 <button mat-fab color="accent" routerLink="/authenticate"><mat-icon>account_circle</mat-icon></button>
             </div>
         </div>
         <div class="header">
-            <h1 id="app-title">Bienvenido a <span class="app-name">{{appname}}.</span></h1>
-            <span id="app-college">UACH Facultad de Ciencias Quimicas</span>
+            <img src="assets/img/branding/photon_color.svg" class="animated fadeInDown fast" alt="App logo" height="128" width="128">
+            <h1 id="app-title" class="animated fadeInDown">Bienvenido a <span class="app-name">{{appname}}.</span></h1>
+            <span id="app-college" class="animated fadeInDown delay-1s">UACH Facultad de Ciencias Quimicas</span>
             <div>
-                <button class="" mat-flat-button color="accent">Ver mas</button>
+                <button class="button-container animated zoomIn fast" mat-flat-button color="accent" (click)="onMoreInfo()">Ver mas</button>
             </div>
         </div>
         <div>
 
         </div>
     </div>
-    <div class="content mat-app-background" role="main">
+
+    <!-- Scrollable -->
+    <div class="content" role="main">
+        <!-- What -->
         <section class="section">
-            <h2 class="section-title">¿Qué es {{appname}}?</h2>
+            <div class="section-title" style="padding: 16px 0; margin: 32px 0 8px 0;">
+                <img src="assets/img/branding/photon_color.svg" alt="App logo" height="64">
+                <b>¿Qué es <span class="app-name">{{appname}}</span>?</b>
+            </div>
+            <mat-divider class="divider"></mat-divider>
+            <div class="section-content">
+                <h2>Enfocado en mejorar la vida estudiantil.</h2>
+                <p>
+                    <strong>{{appname}}</strong> es una plataforma donde estudiantes pueden recoger material de laboratorio para practicas 
+                    mas rapido que nunca.
+                </p>
+                <div class="section-actions">
+                    <button mat-button color="primary" routerLink="/authenticate">Probar ahora</button>
+                </div>
+                <div class="section-img">
+                    <img src="assets/img/illustrations/exams.svg" alt="Students">
+                </div>
+            </div>
         </section>
+
+        <!-- Who -->
+        <section class="section">
+            <div class="section-title">
+                <b>¿Quien mas puede usar <span class="app-name">{{appname}}</span>?</b>
+            </div>
+            <mat-divider class="divider"></mat-divider>
+            <div class="section-content">
+                <h2>Todos tienen un rol.</h2>
+                <p>
+                    <strong>{{appname}}</strong> no es exclusivo para estudiantes.
+                    
+                    El personal academico y administrativo cuenta con su propia
+                    seccion para realizar sus tareas cotidianas.
+                </p>
+                <div class="section-actions">
+                    <button mat-button color="primary" routerLink="/authenticate">Empezar ahora</button>
+                </div>
+                <div class="section-img">
+                    <img src="assets/img/illustrations/teacher.svg" alt="Professor">
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform -->
+        <section class="section" id="platform">
+            <div class="section-title">
+                <b>Plataformas disponibles</b>
+            </div>
+            <mat-divider class="divider"></mat-divider>
+            <div class="section-content">
+                <div class="card-container">
+                    <!-- Students -->
+                    <div class="card modern-dark">
+                        <div class="card-title">
+                            <strong>{{appname}}</strong> students
+                        </div>
+                        <div class="card-content">
+                            <p>
+                                Recoger material nunca fue mas facil.
+                            </p>
+                        </div>
+                        <div class="card-actions">
+                            <button mat-button color="primary">Comenzar</button>
+                        </div>
+                        <div class="card-img">
+                            <img src="assets/img/illustrations/math.svg" alt="student">
+                        </div>
+                    </div>
+
+                    <!-- Teachers -->
+                    <div class="card modern-light">
+                        <div class="card-title">
+                            <strong>{{appname}}</strong> teachers
+                        </div>
+                        <div class="card-content">
+                            <p>
+                                Asigne practicas a sus estudiantes.
+                            </p>
+                        </div>
+                        <div class="card-actions">
+                            <button mat-button color="primary">Comenzar</button>
+                        </div>
+                        <div class="card-img">
+                            <img src="assets/img/illustrations/professor.svg" alt="professor">
+                        </div>
+                    </div>
+
+                    <!-- Delivery -->
+                    <div class="card modern-2">
+                        <div class="card-title">
+                            <strong>{{appname}}</strong> delivery
+                        </div>
+                        <div class="card-content">
+                            <p>
+                                Administre el almacen.
+                                <br>
+                                Entregue pedidos.
+                            </p>
+                        </div>
+                        <div class="card-actions">
+                            <button mat-button color="primary">Comenzar</button>
+                        </div>
+                        <div class="card-img">
+                            <img src="assets/img/illustrations/delivery.svg" alt="delivery">
+                        </div>
+                    </div>
+
+                    <!-- Manager -->
+                    <div class="card modern-dark-2">
+                        <div class="card-title">
+                            <strong>{{appname}}</strong> manager
+                        </div>
+                        <div class="card-content">
+                            <p>
+                                Analice cualquier movimiento.
+                            </p>
+                        </div>
+                        <div class="card-actions">
+                            <button mat-button>Comenzar</button>
+                        </div>
+                        <div class="card-img">
+                            <img src="assets/img/illustrations/admin.svg" alt="admin">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="footer">
+            {{year}} &copy; Damascus Mexico Group
+        </div>
     </div>
 </div>
